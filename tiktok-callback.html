@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer">
+<title>Connecting TikTok — Captain Growth</title><style>body{font:16px/1.6 system-ui,sans-serif;max-width:700px;margin:64px auto;padding:0 20px;color:#17202a}.box{border:1px solid #d9e1e8;border-radius:12px;padding:20px}a{color:#174ea6}</style></head>
+<body><div class="box"><h1>Completing TikTok connection</h1><p id="status">Sending the authorization response securely to the local Captain Growth connector…</p><p><a id="fallback" href="#">Continue to the local connector</a></p></div>
+<script>
+(function(){
+  var destination='http://127.0.0.1:8765/oauth/tiktok/callback'+window.location.search;
+  document.getElementById('fallback').href=destination;
+  if(!window.location.search){document.getElementById('status').textContent='No authorization response was received.';return;}
+  window.location.replace(destination);
+})();
+</script></body></html>
